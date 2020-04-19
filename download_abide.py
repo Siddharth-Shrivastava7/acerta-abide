@@ -24,10 +24,10 @@ def collect_and_download(derivative, pipeline, strategy, out_dir):
         os.makedirs(out_dir)
 
     s3_pheno_file = open("./data/phenotypes/Phenotypic_V1_0b_preprocessed1.csv", "r")
-    pheno_list = s3_pheno_file.readlines()
+    pheno_list = s3_pheno_file.readlines() 
 
     header = pheno_list[0].split(",")
-    file_idx = header.index("FILE_ID")
+    file_idx = header.index("FILE_ID") 
 
     s3_paths = []
     for pheno_row in pheno_list[1:]:
